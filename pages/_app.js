@@ -1,26 +1,33 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import App from "next/app";
+import Header from "../components/header";
+import AppContext from "../context/appContext";
+import { GlobalStyle } from "../globalStyle";
+import styled, { ThemeProvider } from "styled-components";
+import logger from "../pages/api/logger";
+import { ToastContainer } from "react-toastify";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
+logger.init();
 
 const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
+  lightGrey: "#9599A8",
+  white: "#FFFFFF",
+};
 
-export default function App({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
-    <>
-      <GlobalStyle />
+    <AppContext.Provider>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <GlobalStyle />
+        <Header />
+        <Main id="main">
+          <ToastContainer />
+          <Component {...pageProps} />
+        </Main>
       </ThemeProvider>
-    </>
-  )
-}
+    </AppContext.Provider>
+  );
+};
+
+export default MyApp;
+
+const Main = styled.main``;
