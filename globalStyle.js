@@ -1,47 +1,58 @@
 import { createGlobalStyle } from "styled-components";
-import mediumFont from "./fonts/Karla-Medium.ttf";
-import regularFont from "./fonts/Karla-Regular.ttf";
-import semiBoldFont from "./fonts/Karla-SemiBold.ttf";
-import boldFont from "./fonts/Karla-Bold.ttf";
-import extraBoldFont from "./fonts/Karla-ExtraBold.ttf";
-import test from "./fonts/SF Pro Display Medium.ttf";
 
 export const GlobalStyle = createGlobalStyle`
+
   @font-face {
-    font-family: "Karla-Regular";
-    src: url(${regularFont});
+    font-family: "sfprodisplay-regular";
+    font-weight: normal;
+    font-style: normal;
+    font-display: optional;
+    src: url("/fonts/sfprodisplay-regular.woff2") format('woff2'),
+       url("/fonts/sfprodisplay-regular.woff") format('font-woff'),
+       url("/fonts/sfprodisplay-regular.ttf")  format('truetype'),
+       url("/fonts/sfprodisplay-regular.svg") format('svg');
   }
 
   @font-face {
-    font-family: "SF Pro Display Medium";
-    src: url(${test}) format('truetype');
+    font-family: "sfprodisplay-medium";
+    font-weight: 500;
+    font-style: normal;
+    font-display: optional;
+    src: url("/fonts/sfprodisplay-medium.woff2") format('woff2'),
+       url("/fonts/sfprodisplay-medium.woff") format('font-woff'),
+       url("/fonts/sfprodisplay-medium.ttf")  format('truetype'),
+       url("/fonts/sfprodisplay-medium.svg") format('svg');
   }
 
-  // @font-face {
-  //   font-family: "Karla-Medium";
-  //   src: url(${mediumFont});
-  // }
-  //
-  // @font-face {
-  //   font-family: "Karla-SemiBold";
-  //   src: url(${semiBoldFont});
-  // }
-  //
-  // @font-face {
-  //   font-family: "Karla-Bold";
-  //   src: url(${boldFont});
-  // }
-  //
-  // @font-face {
-  //   font-family: "Karla-ExtraBold";
-  //   src: url(${extraBoldFont});
-  // }
+  @font-face {
+    font-family: "sfprodisplay-semibold";
+    font-weight: 600;
+    font-style: normal;
+    font-display: optional;
+    src: url("/fonts/sfprodisplay-semibold.woff2") format('woff2'),
+       url("/fonts/sfprodisplay-semibold.woff") format('font-woff'),
+       url("/fonts/sfprodisplay-semibold.ttf") format('truetype'),
+       url("/fonts/sfprodisplay-semibold.svg") format('svg');
+  }
+
+
+  @font-face {
+    font-family: "sfprodisplay-bold";
+    font-weight: bold;
+    font-style: normal;
+    font-display: optional;
+    src: url("/fonts/sfprodisplay-bold.woff2") format('woff2'),
+       url("/fonts/sfprodisplay-bold.woff") format('font-woff'),
+       url("/fonts/sfprodisplay-bold.ttf") format('truetype'),
+       url("/fonts/sfprodisplay-bold.svg") format('svg');
+  }
+
 
   body {
     margin: 0;
-    font-family: "Karla-Regular", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    font-family: "sfprodisplay-regular", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue";
+      "Helvetica Neue" ,sans-serif;
     color: #272932;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
