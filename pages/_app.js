@@ -9,7 +9,10 @@ import { ToastContainer } from "react-toastify";
 logger.init();
 
 const theme = {
-  lightGrey: "#9599A8",
+  regular: "sfprodisplay-regular",
+  medium: "sfprodisplay-medium",
+  semiBold: "sfprodisplay-semibold",
+  bold: "sfprodisplay-bold",
   white: "#FFFFFF",
 };
 
