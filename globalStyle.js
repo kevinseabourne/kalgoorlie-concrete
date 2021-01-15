@@ -1,4 +1,20 @@
 import { createGlobalStyle } from "styled-components";
+import regularFontWOFF2 from "./fonts/sfprodisplay-regular.woff2";
+import regularFontWOFF from "./fonts/sfprodisplay-regular.woff";
+import regularFontTTF from "./fonts/sfprodisplay-regular.ttf";
+import regularFontSVG from "./fonts/sfprodisplay-regular.svg";
+import mediumFontWOFF2 from "./fonts/sfprodisplay-medium.woff2";
+import mediumFontWOFF from "./fonts/sfprodisplay-medium.woff";
+import mediumFontTTF from "./fonts/sfprodisplay-medium.ttf";
+import mediumFontSVG from "./fonts/sfprodisplay-medium.svg";
+import semiBoldFontWOFF2 from "./fonts/sfprodisplay-semibold.woff2";
+import semiBoldFontWOFF from "./fonts/sfprodisplay-semibold.woff";
+import semiBoldFontTTF from "./fonts/sfprodisplay-semibold.ttf";
+import semiBoldFontSVG from "./fonts/sfprodisplay-semibold.svg";
+import boldFontWOFF2 from "./fonts/sfprodisplay-bold.woff2";
+import boldFontWOFF from "./fonts/sfprodisplay-bold.woff";
+import boldFontTTF from "./fonts/sfprodisplay-bold.ttf";
+import boldFontSVG from "./fonts/sfprodisplay-bold.svg";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -7,10 +23,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: optional;
-    src: url("/fonts/sfprodisplay-regular.woff2") format('woff2'),
-       url("/fonts/sfprodisplay-regular.woff") format('font-woff'),
-       url("/fonts/sfprodisplay-regular.ttf")  format('truetype'),
-       url("/fonts/sfprodisplay-regular.svg") format('svg');
+    src: url(${regularFontWOFF2}) format('woff2'),
+       url(${regularFontWOFF}) format('font-woff'),
+       url(${regularFontTTF})  format('truetype'),
+       url(${regularFontSVG}) format('svg');
   }
 
   @font-face {
@@ -18,10 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     font-style: normal;
     font-display: optional;
-    src: url("/fonts/sfprodisplay-medium.woff2") format('woff2'),
-       url("/fonts/sfprodisplay-medium.woff") format('font-woff'),
-       url("/fonts/sfprodisplay-medium.ttf")  format('truetype'),
-       url("/fonts/sfprodisplay-medium.svg") format('svg');
+    src: url(${mediumFontWOFF2}) format('woff2'),
+       url(${mediumFontWOFF}) format('font-woff'),
+       url(${mediumFontTTF})  format('truetype'),
+       url(${mediumFontSVG}) format('svg');
   }
 
   @font-face {
@@ -29,10 +45,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-style: normal;
     font-display: optional;
-    src: url("/fonts/sfprodisplay-semibold.woff2") format('woff2'),
-       url("/fonts/sfprodisplay-semibold.woff") format('font-woff'),
-       url("/fonts/sfprodisplay-semibold.ttf") format('truetype'),
-       url("/fonts/sfprodisplay-semibold.svg") format('svg');
+    src: url(${semiBoldFontWOFF2}) format('woff2'),
+       url(${semiBoldFontWOFF}) format('font-woff'),
+       url(${semiBoldFontTTF}) format('truetype'),
+       url(${semiBoldFontSVG}) format('svg');
   }
 
 
@@ -41,18 +57,16 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     font-style: normal;
     font-display: optional;
-    src: url("/fonts/sfprodisplay-bold.woff2") format('woff2'),
-       url("/fonts/sfprodisplay-bold.woff") format('font-woff'),
-       url("/fonts/sfprodisplay-bold.ttf") format('truetype'),
-       url("/fonts/sfprodisplay-bold.svg") format('svg');
+    src: url(${boldFontWOFF2}) format('woff2'),
+       url(${boldFontWOFF}) format('font-woff'),
+       url(${boldFontTTF}) format('truetype'),
+       url(${boldFontSVG}) format('svg');
   }
 
 
   body {
     margin: 0;
-    font-family: "sfprodisplay-regular", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue" ,sans-serif;
+    font-family: "sfprodisplay-regular", Arial ,sans-serif;
     color: #272932;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
